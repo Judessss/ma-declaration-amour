@@ -985,10 +985,11 @@ function playExtraVideos(onComplete) {
   void video2.offsetWidth; // force reflow pour l'animation
   video2.classList.add("morph-fade-in");
   video2.scrollIntoView({ behavior: "smooth", block: "center" });
-  video2.play().catch(() => {});
+  video2.play().catch(()  music.pause(); {});
 
   video2.onended = () => {
     video2.style.display = "none";
+    music.play();
 
     // --- VIDÉO 3 ---
     video3.style.display = "block";
@@ -1009,10 +1010,11 @@ function playExtraVideos(onComplete) {
       void video4.offsetWidth;
       video4.classList.add("morph-fade-in");
       video4.scrollIntoView({ behavior: "smooth", block: "center" });
-      video4.play().catch(() => {});
+      video4.play().catch(() music.pause(); {});
 
       video4.onended = () => {
         video4.style.display = "none";
+        music.play();
 
         // --- VIDÉO 5---
         video5.style.display = "block";
